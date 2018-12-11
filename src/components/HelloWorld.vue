@@ -1,8 +1,8 @@
 <template>
   <div>
     <ul>
-      <li v-for="item in data" :key="item.id">
-        {{ item.name }}
+      <li v-for="(value, key) in data" :key="key">
+        {{ value }}
       </li>
     </ul>
   </div>
@@ -11,10 +11,10 @@
 <script>
 const data = function() {
   return {
-    data: [
-      { id: 1, name: 'Sam' },
-      { id: 2, name: 'Kevin' },
-    ],
+    data: {
+      1: 'Sam',
+      2: 'Kevin',
+    },
   };
 };
 
